@@ -20,3 +20,4 @@ Route::get('/',function(){
 });
 Route::get('/service', [ServiceController::class,'index'])->name('liste.index');
 Route::get('/service/create', [ServiceController::class,'create'])->name('liste.index');
+Route::post('/service', [ServiceController::class,'store'])->name('liste.store');
