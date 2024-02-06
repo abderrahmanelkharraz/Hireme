@@ -16,8 +16,9 @@ class ServiceController extends Controller
 
     public function store(Request $request){
         $data = $request->validate([
+            'id' => 'required',
             'title' => 'required',
-            'description' => 'required',
+            'description' => 'nullable',
             'category' => 'required',
             'cout' => 'required|decimal:2',
 
