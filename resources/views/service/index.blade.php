@@ -40,20 +40,20 @@
     
 
         <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
-            <a href="service/create" class="hover:bg-gray-600 rounded py-2 px-4 mx-2">Ajouter un poste</a>
+            <a href="service/create" class="hover:bg-blue-600 rounded py-2 px-4 mx-2">Ajouter un poste</a>
         </div>
 
     <div class="container mx-auto flex flex-wrap py-6">
 
       @foreach ($services as $service)
           
-      <article class="flex flex-col shadow my-4 h-64 w-full">
+      <article class="flex flex-col shadow my-4 h-64 w-80">
         <div class="bg-white flex flex-col justify-start p-6">
-            <a href="#" class="text-blue-700 text-sm font-bold uppercase pb-4">{{ $service->category }}</a>
-            <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">{{ $service->title }}</a>
-            <p href="#" class="text-sm pb-3">
-                By <a href="#" class="font-semibold hover:text-gray-800">{{ $service->description }}</a>,
-                Published on {{ $service->cout }}
+            <h2  class="text-blue-700 text-sm font-bold uppercase pb-4">{{ $service->category }}</h2>
+            <h1  class="text-3xl font-bold hover:text-gray-700 pb-4">{{ $service->title }}</h1>
+            <p  class="text-sm pb-3">
+                 <a class="font-semibold hover:text-gray-800">{{ $service->description }} <br></a>
+                 {{ $service->cout }}
             </p>
         </div>
     </article>
