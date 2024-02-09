@@ -15,6 +15,6 @@ class Service extends Model
     //     'category',
     //     'cout',
     // ];
-    protected $fillable = ['id', 'title', 'description', 'category', 'cout'];
+    protected $fillable = ['title', 'description', 'category', 'cout'];
 
 }

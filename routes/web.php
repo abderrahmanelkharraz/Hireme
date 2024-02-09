@@ -15,9 +15,10 @@ use App\Http\Controllers\ServiceController;
 |
 */
 
-Route::get('/',function(){
-    return view('service');
-});
+// Route::get('/',function(){
+//     return view('/service/index');
+// });
+Route::get('/', [ServiceController::class,'index'])->name('liste.index');
 Route::get('/service', [ServiceController::class,'index'])->name('liste.index');
 Route::get('/service/create', [ServiceController::class,'create'])->name('liste.index');
-Route::post('/service', [ServiceController::class,'store'])->name('liste.store');
+Route::post('/service/create', [ServiceController::class,'store'])->name('liste.store');

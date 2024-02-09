@@ -8,7 +8,12 @@ use App\Models\Service;
 class ServiceController extends Controller
 {
     public function index(){
-        return view('service.index');
+        $services = Service::all();
+        return view('service.index',['services' => $services]);
+        // return view('service.index', ['service' => $serviceData]);
+
+        
+        
     }
     public function create(){
         return view('service.create');
@@ -16,18 +21,17 @@ class ServiceController extends Controller
 
     public function store(Request $request){
         $data = $request->validate([
-            'id' => 'required',
             'title' => 'required',
             'description' => 'nullable',
             'category' => 'required',
-            'cout' => 'required|decimal:2',
+            'cout' => 'required',
 
 
         ]);
 
-        $newService = Service::create($data);
+        Service::create($data);
         
-        return redirect(route('service.index'));
+        return redirect('/service');
 
 
     }

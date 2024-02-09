@@ -11,17 +11,8 @@
 </head>
 <body>
 
-    {{-- <div class="container p-3 w-full">
-        <div>
-            @if($errors->any())
-            <ul>
-                @foreach($errors->all() as $error)
-                    <li>{{$error}}</li>
-                @endforeach
-            </ul>
-        </div> --}}
 
-        <form method="post" action="{{ route('liste.store') }}" class="mx-auto max-w-md bg-white p-6 rounded-md shadow-md">
+        <form method="post" action="{{ route('liste.store') }}" class="mx-auto max-w-md bg-white p-6 rounded-md shadow-md" method="POST">
             @csrf
             @method('post')
 
