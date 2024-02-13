@@ -18,7 +18,7 @@
 
             <nav>
                 <ul class="flex items-center justify-between font-bold text-sm text-white uppercase no-underline">
-                    <li><a class="hover:text-gray-200 hover:underline px-4" href="#">HireME</a></li>
+                    <li><a class="hover:text-gray-200 hover:underline px-4">HireME</a></li>
                 </ul>
             </nav>
 
@@ -30,7 +30,7 @@
     <!-- Text Header -->
     <header class="w-full container mx-auto">
         <div class="flex flex-col items-center py-12">
-            <a class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl" href="#">
+            <a class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl" >
                 HireME
             </a>
             
@@ -43,7 +43,7 @@
             <a href="service/create" class="hover:bg-blue-600 rounded py-2 px-4 mx-2">Ajouter un poste</a>
         </div>
 
-    <div class="container mx-auto flex flex-wrap py-6">
+    <div class="gap-9 container mx-auto flex flex-wrap py-6">
 
       @foreach ($services as $service)
           
@@ -56,6 +56,9 @@
                  {{ $service->cout }}
             </p>
         </div>
+
+        <button type="delete" class="bg-blue-800 text-white p-2 rounded ">delete </button>
+
     </article>
         @endforeach
 

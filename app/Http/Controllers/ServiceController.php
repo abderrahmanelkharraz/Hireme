@@ -34,5 +34,8 @@ class ServiceController extends Controller
         return redirect('/service');
 
 
+
+    }
+    
     }
 }
